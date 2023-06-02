@@ -1,0 +1,150 @@
+.root{
+    --fuentePrincipal : 'Gothic A1',sans-serif;
+    --fuenteSecundaria :'Oswald',sans-serif;
+    --primario:#f1a94e;
+    --secundario:#44b3c2;
+    --claro:#ffffff;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+html{
+    box-sizing: border-box;
+   
+}
+
+body{
+    
+    font-family: var(--fuentePrincipal);
+
+}
+
+.contenedor{
+    max-width: 1100px;
+    width: 90%;
+    margin: 0px auto;
+}
+img{
+    max-width: 100%;
+}
+h1{
+    font-size: 2.8rem;
+}
+h2{
+    font-size: 2.6rem;
+    margin-top: 3rem;
+}
+p{
+    font-family: var(--fuentePrincipal);
+}
+/*Header*/
+.header{
+    background: url('../img/fondo.jpg');
+    color: #ffffff;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.header .contenido{
+    text-align: center;
+    color: var(--claro);
+}
+
+.header .contenedor{
+    display: grid;
+    align-content: center;
+    height: 100vh;
+}
+.titulo{
+    margin: 0px;
+}
+
+/* Servicion */
+.servicios{
+    text-align: center;
+    margin-top: 5rem;
+}
+.servicios h2{
+    padding-bottom:.5rem ;
+
+}
+.servicios h2::after{
+    height: .5rem;
+    width: 8rem;
+    background-color: blue;
+    content: '';
+    display: block;
+    margin: 0px auto;
+    margin-top:1rem;
+}
+.servicios i{
+    font-size: 3rem;
+    color: #44b3c2;
+}
+
+
+@media (min-width:768px) {
+    .servicios{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        grid-column-gap: 2rem;    
+    }
+    .listado{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        grid-column-gap: 4rem; 
+        grid-auto-rows: max-content;
+    }
+
+    .elemento:nth-child(3){
+        grid-row-end:span 2;
+    }
+}
+
+//Portafolio
+
+@media (min-width:768px) {
+    .elemento{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        grid-column-gap: 2rem;   
+    }
+    .elemento:nth-child(3){
+        grid-row-end:span 2;
+    }
+    
+}
+
+.elemento{
+    border-bottom: 1px solid rgb(117, 117, 117);
+    margin-bottom: 3rem;
+}
+
+
+/* Footer */
+.footer{
+    background-image: url('../img/contacto.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+    padding: 2rem 0px;
+    margin-top: 5rem;
+}
+h3{
+    font-size: 2rem;
+    font-size: ;
+}
+.widget p{
+    margin-top: 1rem;
+}
+
+@media (min-width:768px) {
+    .footer .contenedor{
+        display: grid;
+        grid-template-columns: repeat(2,30%) auto;
+    }
+    
+}
